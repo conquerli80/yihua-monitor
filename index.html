@@ -1,1 +1,393 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>湖北宜化·实时研究终端 000422</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#070a0f;color:#c9d1d9;font-family:'Courier New',monospace;font-size:13px;min-height:100vh}.hd{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:0 16px;height:46px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:99}.badge{background:#f0b429;color:#000;font-weight:700;font-size:10px;padding:2px 8px;letter-spacing:1px;margin-right:10px}.nm{font-size:14px;font-weight:600;color:#c9d1d9;margin-right:8px}.tag{font-size:10px;color:#484f58;border:1px solid #1e2d3d;padding:1px 6px;letter-spacing:1px}.live{display:flex;align-items:center;gap:10px}.dot{width:6px;height:6px;background:#3fb950;border-radius:50%;animation:p 2s infinite}@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}.ts{font-size:10px;color:#484f58}.btn{background:0;border:1px solid #1e2d3d;color:#8b949e;padding:4px 12px;font-size:10px;cursor:pointer;font-family:inherit}.btn:hover{border-color:#f0b429;color:#f0b429}.alert{background:rgba(240,180,41,.05);border-bottom:1px solid rgba(240,180,41,.15);padding:6px 16px;font-size:11px;color:#f0b429;display:flex;align-items:center;gap:8px}.hero{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:14px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:start}.pl{font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}.pm{font-size:34px;font-weight:300;line-height:1;letter-spacing:-1px}.pc{font-size:13px;font-weight:500;margin-top:4px}.up{color:#3fb950}.dn{color:#f85149}.gd{color:#f0b429}.dim{color:#484f58}.stats{display:flex;gap:16px;flex-wrap:wrap;padding-top:4px}.si{display:flex;flex-direction:column;gap:2px}.sl{font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:1px}.sv{font-size:13px;font-weight:500}.pos{background:#111820;border:1px solid #1e2d3d;border-left:2px solid #f0b429;padding:10px 14px;display:flex;gap:16px;flex-wrap:wrap;align-self:stretch;align-items:center}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1e2d3d;margin:1px}.panel{background:#0d1117}.ph{padding:9px 12px 7px;border-bottom:1px solid #1e2d3d;display:flex;align-items:center;justify-content:space-between}.pt{font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:1.5px}.pb{font-size:9px;padding:1px 5px;border:1px solid;letter-spacing:.5px}.green-b{border-color:#3fb950;color:#3fb950}.gold-b{border-color:#f0b429;color:#f0b429}.blue-b{border-color:#388bfd;color:#388bfd}.pc-body{padding:10px 12px}table{width:100%;border-collapse:collapse}td{padding:6px 3px;border-bottom:1px solid #0d1117;font-size:11px}.last td{border-bottom:0}td:nth-child(1){color:#8b949e;width:100px}td:nth-child(2){color:#c9d1d9;font-weight:500;text-align:right}td:nth-child(3){text-align:right;width:65px}td:nth-child(4){text-align:center;width:20px}.fr{display:flex;align-items:center;padding:6px 0;border-bottom:1px solid #0d1117}.fr:last-child{border-bottom:0}.fn{font-size:11px;color:#8b949e;width:72px}.bw{flex:1;height:3px;background:#111820;margin:0 8px;overflow:hidden}.bf{height:100%;transition:width .7s}.bpos{background:#3fb950}.bneg{background:#f85149}.fa{font-size:11px;font-weight:500;text-align:right;width:72px}.sg{display:grid;grid-template-columns:1fr 1fr;gap:6px}.sc{background:#111820;border:1px solid #1e2d3d;padding:8px 10px;border-left:2px solid}.sc.bull{border-left-color:#3fb950}.sc.bear{border-left-color:#f85149}.sc.watch{border-left-color:#f0b429}.sc.neu{border-left-color:#484f58}.sn{font-size:9px;color:#484f58;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}.sv2{font-size:12px;font-weight:500;color:#c9d1d9;margin-bottom:2px}.snt{font-size:10px;color:#484f58}.hr{display:flex;align-items:center;padding:7px 0;border-bottom:1px solid #0d1117;gap:6px}.hr:last-child{border-bottom:0}.hrn{font-size:9px;color:#484f58;width:14px}.hrname{flex:1;font-size:11px;color:#8b949e}.hrp{font-size:11px;color:#c9d1d9;font-weight:500;width:42px;text-align:right}.hrs{font-size:8px;padding:1px 4px;border:1px solid;width:36px;text-align:center}.hs-inc{border-color:#3fb950;color:#3fb950}.hs-hold{border-color:#484f58;color:#484f58}.tl{display:flex;flex-direction:column}.ti{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid #0d1117}.ti:last-child{border-bottom:0}.td{font-size:9px;color:#484f58;width:48px;flex-shrink:0;padding-top:2px}.tdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}.dk{background:#f0b429;box-shadow:0 0 5px #f0b429}.dp{background:transparent;border:1px solid #484f58}.dd{background:#3fb950}.tt{font-size:11px;font-weight:500;color:#c9d1d9;margin-bottom:2px}.tds{font-size:10px;color:#484f58;line-height:1.4}.ch-wrap{display:flex;align-items:flex-end;gap:4px;height:60px;margin-bottom:6px}.scr{grid-column:1/-1;background:#0d1117;padding:14px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;border-top:1px solid #1e2d3d}.snum{font-size:44px;font-weight:300;color:#f0b429;line-height:1}.sbr{display:flex;flex-direction:column;gap:6px}.srow{display:flex;align-items:center;gap:8px}.snm{font-size:9px;color:#484f58;width:54px}.swp{flex:1;height:3px;background:#111820;overflow:hidden}.sbf{height:100%;transition:width 1s}.sval{font-size:9px;color:#484f58;width:20px;text-align:right}.vrd{text-align:right}.vl{font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.vv{font-size:14px;color:#3fb950;font-weight:500}.vn{font-size:10px;color:#484f58;margin-top:4px;line-height:1.4}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.scr{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}@media(max-width:600px){.grid{grid-template-columns:1fr}}</style></head><body><div class="hd"><div style="display:flex;align-items:center"><span class="badge">SZ·000422</span><span class="nm">湖北宜化化工</span><span class="tag">PE 2.88x · 市值175亿</span></div><div class="live"><span class="dot"></span><span class="ts" id="ts">--:--:--</span><button class="btn" onclick="go()">↻ 刷新</button></div></div><div class="alert"><span>⚡</span>美伊临时停火两周·油价-15%·化肥地缘溢价短期承压·持续监控停火进展<span style="margin-left:auto;font-size:10px;color:#e06c00">2026-04-08</span></div><div class="hero"><div><div class="pl">最新价格 · LIVE</div><div class="pm" id="px">--</div><div class="pc" id="chg">--</div></div><div class="stats"><div class="si"><div class="sl">最高</div><div class="sv" id="hi">--</div></div><div class="si"><div class="sl">最低</div><div class="sv" id="lo">--</div></div><div class="si"><div class="sl">成交额</div><div class="sv" id="amt">--亿</div></div><div class="si"><div class="sl">换手率</div><div class="sv" id="tn">--%</div></div><div class="si"><div class="sl">主力净流</div><div class="sv" id="mf">--万</div></div></div><div class="pos"><div class="si"><div class="sl">成本价</div><div class="sv" style="color:#388bfd">¥15.32</div></div><div class="si"><div class="sl">持仓股数</div><div class="sv">5,500股</div></div><div class="si"><div class="sl">浮动盈亏</div><div class="sv" id="pnl">--</div></div><div class="si"><div class="sl">收益率</div><div class="sv" id="ret">--</div></div><div class="si"><div class="sl">止损距离</div><div class="sv dim" id="stp">--</div></div></div></div><div class="grid"><div class="panel"><div class="ph"><span class="pt">产品价格监控</span><span class="pb blue-b">领先指标</span></div><div class="pc-body"><table><tr><td>🌾 尿素</td><td>1870</td><td class="up">▲8.09%</td><td class="up">●</td></tr><tr><td>🧪 磷酸二铵</td><td>3500</td><td class="up">▲3.2%</td><td class="up">●</td></tr><tr><td>🏗️ PVC</td><td>5900</td><td class="up">▲12.4%</td><td class="gd">◆</td></tr><tr><td>⚗️ 烧碱</td><td>920</td><td class="up">▲5.1%</td><td class="up">●</td></tr><tr><td>⛏️ 煤炭</td><td>780</td><td class="dim">→平稳</td><td class="dim">○</td></tr><tr class="last"><td>🛢️ WTI原油</td><td class="dn">68.5$</td><td class="dn">▼14.8%</td><td class="dn">●</td></tr></table></div></div><div class="panel"><div class="ph"><span class="pt">今日资金流向</span><span class="pb green-b" id="ft">--:--</span></div><div class="pc-body"><div class="fr"><span class="fn">超大单</span><div class="bw"><div class="bf" id="bxl" style="width:0"></div></div><span class="fa" id="vxl">--</span></div><div class="fr"><span class="fn">大单</span><div class="bw"><div class="bf" id="bl" style="width:0"></div></div><span class="fa" id="vl">--</span></div><div class="fr"><span class="fn">中单</span><div class="bw"><div class="bf" id="bm" style="width:0"></div></div><span class="fa" id="vm">--</span></div><div class="fr"><span class="fn">小单</span><div class="bw"><div class="bf" id="bs" style="width:0"></div></div><span class="fa" id="vs">--</span></div><div class="fr" style="border-top:1px solid #1e2d3d;margin-top:4px;padding-top:8px"><span class="fn" style="color:#c9d1d9;font-weight:600">主力合计</span><div class="bw"><div class="bf" id="bt" style="width:0"></div></div><span class="fa" id="vt" style="font-size:13px">--</span></div></div></div><div class="panel"><div class="ph"><span class="pt">宏观信号</span><span class="pb gold-b">持续监控</span></div><div class="pc-body"><div class="sg"><div class="sc bear"><div class="sn">霍尔木兹</div><div class="sv2">临时停火</div><div class="snt">化肥溢价承压</div></div><div class="sc bear"><div class="sn">房屋新开工</div><div class="sv2">同比-12%</div><div class="snt">PVC拐点未至</div></div><div class="sc bull"><div class="sn">磷铵出口</div><div class="sv2">价差+30%</div><div class="snt">超额利润来源</div></div><div class="sc watch"><div class="sn">USDA报告</div><div class="sv2">5月第2周</div><div class="snt">粮食需求验证</div></div></div></div></div><div class="panel"><div class="ph"><span class="pt">关键股东追踪</span><span style="font-size:9px;color:#484f58">2025三季报</span></div><div class="pc-body"><div class="hr"><span class="hrn">1</span><span class="hrname">宜化集团·国资委</span><span class="hrp">22.16%</span><span class="hrs hs-inc">+买</span></div><div class="hr"><span class="hrn">2</span><span class="hrname">代德明·一致行动（7年未动）</span><span class="hrp">8.22%</span><span class="hrs hs-hold">持有</span></div><div class="hr"><span class="hrn">3</span><span class="hrname">北向资金</span><span class="hrp">1.41%</span><span class="hrs hs-inc">+买</span></div><div class="hr"><span class="hrn">4</span><span class="hrname">基本养老保险基金</span><span class="hrp">0.64%</span><span class="hrs hs-hold">持有</span></div><div style="margin-top:8px;padding:7px;background:#111820;border:1px solid #1e2d3d"><div style="font-size:9px;color:#484f58;letter-spacing:1px;margin-bottom:3px">Q3股东人数</div><div style="font-size:11px;color:#3fb950">骤减 <strong style="font-size:15px">36,021</strong> 人 → 筹码集中信号↑</div></div></div></div><div class="panel"><div class="ph"><span class="pt">事件日历</span><span class="pb gold-b" id="cd">--天后</span></div><div class="pc-body"><div class="tl"><div class="ti"><span class="td">04-25</span><div class="tdot dk"></div><div><div class="tt">📋 2025年报披露</div><div class="tds">扣非净利润目标>5.13亿·分红30%</div></div></div><div class="ti"><span class="td">Q2</span><div class="tdot dp"></div><div><div class="tt">🏭 新疆宜化并购股东会</div><div class="tds">32亿·煤炭3000万吨并入·最大催化</div></div></div><div class="ti"><span class="td">5月</span><div class="tdot dp"></div><div><div class="tt">🌾 USDA全球粮食报告</div><div class="tds">化肥需求验证·尿素/磷铵展望</div></div></div><div class="ti"><span class="td">H2</span><div class="tdot dp"></div><div><div class="tt">🔋 精制磷酸达产</div><div class="tds">20万吨·对接宁德时代供应链</div></div></div></div></div></div><div class="panel"><div class="ph"><span class="pt">近10日主力资金</span></div><div class="pc-body"><div class="ch-wrap" id="chart"></div><div style="font-size:9px;color:#484f58">绿柱=净流入 红柱=净流出 单位:万元 | 悬停查看数值</div></div></div><div class="scr"><div><div style="font-size:9px;color:#484f58;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">综合研究评分</div><div class="snum">72</div><div style="font-size:9px;color:#484f58;margin-top:2px">/100</div></div><div class="sbr"><div class="srow"><span class="snm">基本面</span><div class="swp"><div class="sbf" style="width:78%;background:#3fb950"></div></div><span class="sval">78</span></div><div class="srow"><span class="snm">估值</span><div class="swp"><div class="sbf" style="width:85%;background:#3fb950"></div></div><span class="sval">85</span></div><div class="srow"><span class="snm">股东结构</span><div class="swp"><div class="sbf" style="width:80%;background:#388bfd"></div></div><span class="sval">80</span></div><div class="srow"><span class="snm">地缘逻辑</span><div class="swp"><div class="sbf" style="width:70%;background:#f0b429"></div></div><span class="sval">70</span></div><div class="srow"><span class="snm">转型进度</span><div class="swp"><div class="sbf" style="width:55%;background:#f0b429"></div></div><span class="sval">55</span></div><div class="srow"><span class="snm">资金面</span><div class="swp"><div class="sbf" style="width:48%;background:#484f58"></div></div><span class="sval">48</span></div></div><div class="vrd"><div class="vl">投资框架判断</div><div class="vv">段永平·重仓持有</div><div class="vn">低估值+转型+国资背书<br>等待3个催化节点兑现</div></div></div></div><script>const UT='b2884a393a59ad64002292a3e90d46a5';const FH=[{d:'3/26',v:-421},{d:'3/27',v:13392},{d:'3/30',v:5745},{d:'3/31',v:-15441},{d:'4/1',v:-6401},{d:'4/2',v:465},{d:'4/3',v:-2855},{d:'4/7',v:2293},{d:'4/8',v:-7193},{d:'4/9',v:3717}];function fmt(n){const a=Math.abs(n/10000),s=n>=0?'+':'-';return a>=10000?s+(a/10000).toFixed(2)+'亿':s+a.toFixed(0)+'万';}async function fq(){try{const r=await fetch('https://push2.eastmoney.com/api/qt/stock/get?fields=f43,f44,f45,f47,f48,f50,f169,f170&secid=0.000422&ut='+UT+'&_='+Date.now());return (await r.json())?.data;}catch(e){return null;}}async function ff(){try{const r=await fetch('https://push2.eastmoney.com/api/qt/stock/fflow/kline/get?lmt=0&klt=1&fields1=f1,f2,f3,f7&fields2=f51,f52,f53,f54,f55,f56&ut='+UT+'&secid=0.000422&_='+Date.now());const d=await r.json();const k=d?.data?.klines;if(!k?.length)return null;const l=k[k.length-1].split(',');return{time:l[0],main:+l[1],xl:+l[2],l:+l[3],m:+l[4],s:+l[5]};}catch(e){return null;}}function uq(q){if(!q)return;const p=(q.f43/100).toFixed(2),c=(q.f170/1000).toFixed(2),u=+c>=0,col=u?'#3fb950':'#f85149';document.getElementById('px').textContent=p;document.getElementById('px').style.color=col;document.getElementById('chg').textContent=(u?'▲':'▼')+Math.abs(c)+'%';document.getElementById('chg').style.color=col;document.getElementById('hi').textContent=(q.f44/100).toFixed(2);document.getElementById('lo').textContent=(q.f45/100).toFixed(2);document.getElementById('amt').textContent=(q.f48/1e8).toFixed(2)+'亿';document.getElementById('tn').textContent=(q.f50/100).toFixed(2)+'%';const cur=+p,pnl=(cur-15.32)*5500,ret=((cur-15.32)/15.32*100).toFixed(2),stp=((cur-13)/cur*100).toFixed(1);const pe=document.getElementById('pnl');pe.textContent=(pnl>=0?'+':'')+'¥'+pnl.toFixed(0);pe.style.color=pnl>=0?'#3fb950':'#f85149';const re=document.getElementById('ret');re.textContent=(+ret>=0?'+':'')+ret+'%';re.style.color=+ret>=0?'#3fb950':'#f85149';document.getElementById('stp').textContent='距止损-'+stp+'%';document.getElementById('mf').textContent=fmt(q.f48||0);}function uf(f){if(!f)return;document.getElementById('ft').textContent=f.time?.substring(11,16)||'--:--';const its=[{id:'xl',v:f.xl},{id:'l',v:f.l},{id:'m',v:f.m},{id:'s',v:f.s},{id:'t',v:f.main}];const mx=Math.max(...its.map(i=>Math.abs(i.v)));its.forEach(({id,v})=>{const pct=Math.abs(v)/mx*100,pos=v>=0||id==='s';const b=document.getElementById('b'+id),va=document.getElementById('v'+id);if(b){b.style.width=pct+'%';b.className='bf '+(pos?'bpos':'bneg');}if(va){va.textContent=fmt(v);va.style.color=pos?'#3fb950':'#f85149';}});document.getElementById('vt').style.color=f.main>=0?'#3fb950':'#f85149';document.getElementById('mf').textContent=fmt(f.main);}function rc(){const c=document.getElementById('chart');const mx=Math.max(...FH.map(d=>Math.abs(d.v)));c.innerHTML=FH.map(d=>{const h=Math.max(3,Math.abs(d.v)/mx*56),col=d.v>=0?'#3fb950':'#f85149';return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px" title="'+d.d+':'+(d.v>0?'+':'')+Math.round(d.v/10000)+'万"><div style="width:100%;height:'+h+'px;background:'+col+';opacity:.8"></div><div style="font-size:8px;color:#484f58">'+d.d+'</div></div>';}).join('');}function ucd(){const days=Math.ceil((new Date('2026-04-25')-new Date())/86400000);if(days>0)document.getElementById('cd').textContent=days+'天后';}async function go(){document.getElementById('ts').textContent='刷新中...';const[q,f]=await Promise.all([fq(),ff()]);uq(q);uf(f);document.getElementById('ts').textContent=new Date().toTimeString().substring(0,8);}rc();ucd();go();setInterval(go,60000);setInterval(()=>{document.getElementById('ts').textContent=new Date().toTimeString().substring(0,8);},1000);setInterval(ucd,60000);</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖北宜化 · 实时研究终端【修正版】</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  :root {
+    --bg:#070a0f; --bg2:#0d1117; --bg3:#111820; --bg4:#161e28;
+    --border:#1e2d3d; --border2:#2a4060;
+    --text:#c9d1d9; --text2:#8b949e; --text3:#484f58;
+    --green:#3fb950; --red:#f85149; --gold:#f0b429; --blue:#388bfd; --orange:#e06c00;
+    --mono:'JetBrains Mono',monospace; --sans:'Noto Sans SC',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;min-height:100vh;overflow-x:hidden}
+
+  /* 顶部警示条 */
+  .warn-bar{background:rgba(248,81,73,0.08);border-bottom:2px solid rgba(248,81,73,0.4);padding:8px 20px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--red)}
+  .warn-bar strong{color:#ff6b6b}
+
+  /* 顶栏 */
+  .hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;height:48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .badge{background:var(--gold);color:#000;font-weight:700;font-size:10px;padding:2px 8px;letter-spacing:1px;margin-right:10px}
+  .badge-warn{background:var(--red);color:#fff;font-weight:700;font-size:9px;padding:1px 6px;letter-spacing:1px;margin-left:8px;border-radius:2px}
+  .nm{font-size:14px;font-weight:600;color:var(--text)}
+  .live{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--text3)}
+  .dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;display:inline-block}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .btn{background:0;border:1px solid var(--border2);color:var(--text2);padding:4px 12px;font-size:10px;cursor:pointer;font-family:var(--mono)}.btn:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* 价格英雄区 */
+  .hero{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center}
+  .pl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:var(--mono)}
+  .pm{font-family:var(--mono);font-size:36px;font-weight:300;line-height:1;letter-spacing:-1px}
+  .pc{font-family:var(--mono);font-size:13px;font-weight:500;margin-top:3px}
+  .up{color:var(--green)}.dn{color:var(--red)}.gd{color:var(--gold)}.dim{color:var(--text3)}.bl{color:var(--blue)}.ora{color:var(--orange)}
+  .stats{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .si{display:flex;flex-direction:column;gap:2px}
+  .sl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-family:var(--mono)}
+  .sv{font-family:var(--mono);font-size:13px;font-weight:500}
+  .pos-box{background:var(--bg3);border:1px solid var(--border);border-left:2px solid var(--gold);padding:10px 14px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+
+  /* 估值警示板 */
+  .val-bar{background:rgba(248,81,73,0.06);border-bottom:1px solid rgba(248,81,73,0.2);padding:10px 20px;display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--border)}
+  .val-cell{background:var(--bg3);padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+  .val-label{font-family:var(--mono);font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
+  .val-num{font-family:var(--mono);font-size:16px;font-weight:700}
+  .val-sub{font-family:var(--mono);font-size:9px}
+
+  /* 主网格 */
+  .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin:1px}
+  .panel{background:var(--bg2)}
+  .ph{padding:9px 12px 7px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px}
+  .pb-badge{font-size:9px;padding:1px 5px;border:1px solid;letter-spacing:.5px}
+  .g-badge{border-color:var(--green);color:var(--green)}
+  .r-badge{border-color:var(--red);color:var(--red)}
+  .o-badge{border-color:var(--gold);color:var(--gold)}
+  .b-badge{border-color:var(--blue);color:var(--blue)}
+  .pc-body{padding:10px 12px}
+  table{width:100%;border-collapse:collapse}
+  td{padding:6px 3px;border-bottom:1px solid var(--bg3);font-family:var(--mono);font-size:11px}
+  .last td{border-bottom:0}
+  .fr{display:flex;align-items:center;padding:6px 0;border-bottom:1px solid var(--bg3)}.fr:last-child{border-bottom:0}
+  .fn{font-size:11px;color:var(--text2);width:72px}
+  .bw{flex:1;height:3px;background:var(--bg3);margin:0 8px;overflow:hidden}
+  .bf{height:100%;transition:width .7s}
+  .bpos{background:var(--green)}.bneg{background:var(--red)}
+  .fa{font-family:var(--mono);font-size:11px;font-weight:500;text-align:right;width:72px}
+
+  /* 宏观信号 */
+  .sg{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .sc{background:var(--bg3);border:1px solid var(--border);padding:8px 10px;border-left:2px solid}
+  .sc.bull{border-left-color:var(--green)}.sc.bear{border-left-color:var(--red)}.sc.watch{border-left-color:var(--gold)}.sc.neu{border-left-color:var(--text3)}
+  .sn{font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+  .sv2{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--text);margin-bottom:2px}
+  .snt{font-size:10px;color:var(--text3)}
+
+  /* 股东 */
+  .hr{display:flex;align-items:center;padding:7px 0;border-bottom:1px solid var(--bg3);gap:6px}.hr:last-child{border-bottom:0}
+  .hrn{font-family:var(--mono);font-size:9px;color:var(--text3);width:14px}
+  .hrname{flex:1;font-size:11px;color:var(--text2)}
+  .hrp{font-family:var(--mono);font-size:11px;color:var(--text);font-weight:500;width:42px;text-align:right}
+  .hrs{font-size:8px;padding:1px 4px;border:1px solid;width:36px;text-align:center}
+  .hs-inc{border-color:var(--green);color:var(--green)}.hs-hold{border-color:var(--text3);color:var(--text3)}
+
+  /* 事件 */
+  .tl{display:flex;flex-direction:column}
+  .ti{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--bg3)}.ti:last-child{border-bottom:0}
+  .td{font-family:var(--mono);font-size:9px;color:var(--text3);width:48px;flex-shrink:0;padding-top:2px}
+  .tdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
+  .dk{background:var(--gold);box-shadow:0 0 5px var(--gold)}
+  .dp{background:transparent;border:1px solid var(--text3)}
+  .tt{font-size:11px;font-weight:500;color:var(--text);margin-bottom:2px}
+  .tds{font-size:10px;color:var(--text3);line-height:1.4}
+
+  /* 评分 */
+  .scr{grid-column:1/-1;background:var(--bg2);padding:14px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;border-top:1px solid var(--border)}
+  .snum{font-family:var(--mono);font-size:44px;font-weight:300;line-height:1}
+  .sbr{display:flex;flex-direction:column;gap:7px}
+  .srow{display:flex;align-items:center;gap:8px}
+  .snm{font-size:9px;color:var(--text3);width:60px;font-family:var(--mono)}
+  .swp{flex:1;height:3px;background:var(--bg3);overflow:hidden}
+  .sbf{height:100%;transition:width 1s}
+  .sval{font-size:9px;color:var(--text3);font-family:var(--mono);width:28px;text-align:right}
+  .vrd{text-align:right}
+  .vl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+  .vv{font-family:var(--mono);font-size:13px;font-weight:500}
+  .vn{font-size:10px;color:var(--text3);margin-top:4px;line-height:1.5}
+
+  /* 近10日图 */
+  .ch-wrap{display:flex;align-items:flex-end;gap:4px;height:60px;margin-bottom:6px}
+
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.scr{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.val-bar{grid-template-columns:repeat(3,1fr)}.stats{gap:10px}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}.val-bar{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- 顶部警示条 -->
+<div class="warn-bar">
+  <span>▲ 数据修正公告</span>
+  <span>原版PE TTM 2.88倍为严重错误（字段解析错误），<strong>正确PE TTM = 42.7倍</strong>，估值吸引力评分由85分降至35分，综合评分由72分降至56分。</span>
+</div>
+
+<!-- 顶栏 -->
+<div class="hdr">
+  <div style="display:flex;align-items:center">
+    <span class="badge">SZ·000422</span>
+    <span class="nm">湖北宜化化工</span>
+    <span class="badge-warn">数据已修正</span>
+  </div>
+  <div class="live"><span class="dot"></span><span id="ts">--:--:--</span><button class="btn" onclick="go()">↻ 刷新</button></div>
+</div>
+
+<!-- 估值核心数据栏 -->
+<div style="background:var(--border);display:grid;grid-template-columns:repeat(6,1fr);gap:1px">
+  <div class="val-cell">
+    <div class="val-label">PE TTM（归母）</div>
+    <div class="val-num dn">42.7x</div>
+    <div class="val-sub dim">原版错误:2.88x</div>
+  </div>
+  <div class="val-cell">
+    <div class="val-label">PE TTM（扣非）</div>
+    <div class="val-num dn">44.1x</div>
+    <div class="val-sub dim">TTM扣非3.85亿</div>
+  </div>
+  <div class="val-cell">
+    <div class="val-label">PE 2024静态</div>
+    <div class="val-num ora">26.0x</div>
+    <div class="val-sub dim">2024净利6.53亿</div>
+  </div>
+  <div class="val-cell">
+    <div class="val-label">PB 市净率</div>
+    <div class="val-num ora">2.96x</div>
+    <div class="val-sub dim">BPS=5.42元</div>
+  </div>
+  <div class="val-cell">
+    <div class="val-label">最新价格</div>
+    <div class="val-num" id="vbar-px" style="color:var(--green)">--</div>
+    <div class="val-sub" id="vbar-chg">--</div>
+  </div>
+  <div class="val-cell">
+    <div class="val-label">总市值</div>
+    <div class="val-num" style="color:var(--text)">169.9亿</div>
+    <div class="val-sub dim">总股本10.58亿</div>
+  </div>
+</div>
+
+<!-- 英雄区 -->
+<div class="hero">
+  <div>
+    <div class="pl">最新价格 · LIVE</div>
+    <div class="pm" id="px">--</div>
+    <div class="pc" id="chg">--</div>
+  </div>
+  <div class="stats">
+    <div class="si"><div class="sl">最高</div><div class="sv" id="hi">--</div></div>
+    <div class="si"><div class="sl">最低</div><div class="sv" id="lo">--</div></div>
+    <div class="si"><div class="sl">成交额</div><div class="sv" id="amt">--亿</div></div>
+    <div class="si"><div class="sl">换手率</div><div class="sv" id="tn">--%</div></div>
+    <div class="si"><div class="sl">主力净流</div><div class="sv" id="mf">--万</div></div>
+  </div>
+  <div class="pos-box">
+    <div class="si"><div class="sl">成本价</div><div class="sv bl">¥15.32</div></div>
+    <div class="si"><div class="sl">持仓</div><div class="sv">5,500股</div></div>
+    <div class="si"><div class="sl">浮动盈亏</div><div class="sv" id="pnl">--</div></div>
+    <div class="si"><div class="sl">收益率</div><div class="sv" id="ret">--</div></div>
+    <div class="si"><div class="sl">止损距离</div><div class="sv dim" id="stp">--</div></div>
+  </div>
+</div>
+
+<!-- 主网格 -->
+<div class="grid">
+
+  <!-- 产品价格 -->
+  <div class="panel">
+    <div class="ph">产品价格监控<span class="pb-badge b-badge">领先指标</span></div>
+    <div class="pc-body">
+      <table>
+        <tr><td class="dim">🌾 尿素</td><td class="up" style="text-align:right;font-weight:500">1870</td><td class="up" style="text-align:right">▲8.09%</td><td style="text-align:center;color:var(--green)">●</td></tr>
+        <tr><td class="dim">🧪 磷酸二铵</td><td style="text-align:right;font-weight:500">3500</td><td class="up" style="text-align:right">▲3.2%</td><td style="text-align:center;color:var(--green)">●</td></tr>
+        <tr><td class="dim">🏗️ PVC</td><td style="text-align:right;font-weight:500">5900</td><td class="up" style="text-align:right">▲12.4%</td><td style="text-align:center;color:var(--gold)">◆</td></tr>
+        <tr><td class="dim">⚗️ 烧碱</td><td style="text-align:right;font-weight:500">920</td><td class="up" style="text-align:right">▲5.1%</td><td style="text-align:center;color:var(--green)">●</td></tr>
+        <tr><td class="dim">⛏️ 煤炭</td><td style="text-align:right;font-weight:500">780</td><td class="dim" style="text-align:right">→平稳</td><td style="text-align:center;color:var(--text3)">○</td></tr>
+        <tr class="last"><td class="dim">🛢️ WTI原油</td><td class="dn" style="text-align:right;font-weight:500">68.5$</td><td class="dn" style="text-align:right">▼14.8%</td><td style="text-align:center;color:var(--red)">●</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 资金流向 -->
+  <div class="panel">
+    <div class="ph">今日资金流向<span class="pb-badge g-badge" id="ft">--:--</span></div>
+    <div class="pc-body">
+      <div class="fr"><span class="fn">超大单</span><div class="bw"><div class="bf" id="bxl" style="width:0"></div></div><span class="fa" id="vxl">--</span></div>
+      <div class="fr"><span class="fn">大单</span><div class="bw"><div class="bf" id="bl2" style="width:0"></div></div><span class="fa" id="vl2">--</span></div>
+      <div class="fr"><span class="fn">中单</span><div class="bw"><div class="bf" id="bm" style="width:0"></div></div><span class="fa" id="vm">--</span></div>
+      <div class="fr"><span class="fn">小单</span><div class="bw"><div class="bf" id="bs" style="width:0"></div></div><span class="fa" id="vs">--</span></div>
+      <div class="fr" style="border-top:1px solid var(--border);margin-top:4px;padding-top:8px">
+        <span class="fn" style="color:var(--text);font-weight:600">主力合计</span>
+        <div class="bw"><div class="bf" id="bt" style="width:0"></div></div>
+        <span class="fa" id="vt" style="font-size:13px">--</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 宏观信号 -->
+  <div class="panel">
+    <div class="ph">宏观信号<span class="pb-badge o-badge">持续监控</span></div>
+    <div class="pc-body">
+      <div class="sg">
+        <div class="sc bear"><div class="sn">霍尔木兹</div><div class="sv2">临时停火</div><div class="snt">化肥溢价承压</div></div>
+        <div class="sc bear"><div class="sn">房屋新开工</div><div class="sv2">同比-12%</div><div class="snt">PVC拐点未至</div></div>
+        <div class="sc bull"><div class="sn">磷铵出口</div><div class="sv2">价差+30%</div><div class="snt">超额利润来源</div></div>
+        <div class="sc watch"><div class="sn">USDA报告</div><div class="sv2">5月第2周</div><div class="snt">粮食需求验证</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 关键股东 -->
+  <div class="panel">
+    <div class="ph">关键股东追踪<span style="font-size:9px;color:var(--text3)">2025三季报</span></div>
+    <div class="pc-body">
+      <div class="hr"><span class="hrn">1</span><span class="hrname">宜化集团·国资委</span><span class="hrp">22.16%</span><span class="hrs hs-inc">+买</span></div>
+      <div class="hr"><span class="hrn">2</span><span class="hrname">代德明·一致行动（7年未动）</span><span class="hrp">8.22%</span><span class="hrs hs-hold">持有</span></div>
+      <div class="hr"><span class="hrn">3</span><span class="hrname">北向资金</span><span class="hrp">1.41%</span><span class="hrs hs-inc">+买</span></div>
+      <div class="hr"><span class="hrn">4</span><span class="hrname">基本养老保险基金</span><span class="hrp">0.64%</span><span class="hrs hs-hold">持有</span></div>
+      <div style="margin-top:8px;padding:7px;background:var(--bg3);border:1px solid var(--border)">
+        <div style="font-size:9px;color:var(--text3);margin-bottom:3px">Q3股东人数</div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--green)">骤减 <strong style="font-size:15px">36,021</strong> 人 → 筹码集中信号</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 事件日历 -->
+  <div class="panel">
+    <div class="ph">事件日历<span class="pb-badge o-badge" id="cd">--天后</span></div>
+    <div class="pc-body">
+      <div class="tl">
+        <div class="ti"><span class="td">04-25</span><div class="tdot dk"></div><div><div class="tt">📋 2025年报披露</div><div class="tds">扣非净利润目标>5.13亿·分红30%·PVC亏损是否收窄？</div></div></div>
+        <div class="ti"><span class="td">Q2</span><div class="tdot dp"></div><div><div class="tt">🏭 新疆宜化并购股东$��</div><div class="tds">32亿·3000万吨煤炭并入·最大催化</div></div></div>
+        <div class="ti"><span class="td">5月</span><div class="tdot dp"></div><div><div class="tt">🌾 USDA粮食报告</div><div class="tds">化肥需求·尿素/磷铵展望</div></div></div>
+        <div class="ti"><span class="td">H2</span><div class="tdot dp"></div><div><div class="tt">🔋 精制磷酸达产</div><div class="tds">20万吨·对接宁德时代供应链</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 近10日资金 -->
+  <div class="panel">
+    <div class="ph">近10日主力资金</div>
+    <div class="pc-body">
+      <div class="ch-wrap" id="chart"></div>
+      <div style="font-size:9px;color:var(--text3)">绿=净流入 红=净流出 | 万元 | 悬停看数值</div>
+    </div>
+  </div>
+
+  <!-- 综合评分（修正版） -->
+  <div class="scr">
+    <div>
+      <div style="font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">综合研究评分（修正版）</div>
+      <div class="snum ora">56</div>
+      <div style="font-size:9px;color:var(--text3);margin-top:2px">/100 &nbsp;<span style="color:var(--red);text-decoration:line-through;font-size:9px">原72分</span></div>
+    </div>
+    <div class="sbr">
+      <div class="srow"><span class="snm">基本面</span><div class="swp"><div class="sbf" style="width:65%;background:var(--gold)"></div></div><span class="sval">65</span><span style="font-size:9px;color:var(--red);margin-left:4px">↓78</span></div>
+      <div class="srow"><span class="snm">估值</span><div class="swp"><div class="sbf" style="width:35%;background:var(--red)"></div></div><span class="sval">35</span><span style="font-size:9px;color:var(--red);margin-left:4px">↓85</span></div>
+      <div class="srow"><span class="snm">股东结构</span><div class="swp"><div class="sbf" style="width:80%;background:var(--blue)"></div></div><span class="sval">80</span></div>
+      <div class="srow"><span class="snm">地缘逻辑</span><div class="swp"><div class="sbf" style="width:60%;background:var(--gold)"></div></div><span class="sval">60</span><span style="font-size:9px;color:var(--red);margin-left:4px">↓70</span></div>
+      <div class="srow"><span class="snm">转型进度</span><div class="swp"><div class="sbf" style="width:55%;background:var(--gold)"></div></div><span class="sval">55</span></div>
+      <div class="srow"><span class="snm">资金面</span><div class="swp"><div class="sbf" style="width:45%;background:var(--text3)"></div></div><span class="sval">45</span></div>
+    </div>
+    <div class="vrd">
+      <div class="vl">修正后投资框架</div>
+      <div class="vv ora">押注盈利改善 · 轻仓等待</div>
+      <div class="vn">PE TTM 42.7倍≠便宜<br>当前≠安全边际充分<br>等待3个催化节点兑现<br>PVC止血→并购落地→磷酸达产</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const UT='b2884a393a59ad64002292a3e90d46a5';
+const FH=[{d:'3/26',v:-421},{d:'3/27',v:13392},{d:'3/30',v:5745},{d:'3/31',v:-15441},{d:'4/1',v:-6401},{d:'4/2',v:465},{d:'4/3',v:-2855},{d:'4/7',v:2293},{d:'4/8',v:-7193},{d:'4/9',v:3717}];
+
+function fmt(n){const a=Math.abs(n/10000),s=n>=0?'+':'-';return a>=10000?s+(a/10000).toFixed(2)+'亿':s+a.toFixed(0)+'万';}
+
+async function fq(){
+  try{
+    const r=await fetch('https://push2.eastmoney.com/api/qt/stock/get?fields=f43,f44,f45,f47,f48,f50,f169,f170&secid=0.000422&ut='+UT+'&_='+Date.now());
+    return (await r.json())?.data;
+  }catch(e){return null;}
+}
+
+async function ff(){
+  try{
+    const r=await fetch('https://push2.eastmoney.com/api/qt/stock/fflow/kline/get?lmt=0&klt=1&fields1=f1,f2,f3,f7&fields2=f51,f52,f53,f54,f55,f56&ut='+UT+'&secid=0.000422&_='+Date.now());
+    const d=await r.json();
+    const k=d?.data?.klines;
+    if(!k?.length)return null;
+    const l=k[k.length-1].split(',');
+    return{time:l[0],main:+l[1],xl:+l[2],l:+l[3],m:+l[4],s:+l[5]};
+  }catch(e){return null;}
+}
+
+function uq(q){
+  if(!q)return;
+  const p=(q.f43/100).toFixed(2),c=(q.f170/1000).toFixed(2),u=+c>=0,col=u?'var(--green)':'var(--red)';
+  document.getElementById('px').textContent=p;
+  document.getElementById('px').style.color=col;
+  document.getElementById('chg').textContent=(u?'▲':'▼')+Math.abs(c)+'%';
+  document.getElementById('chg').style.color=col;
+  document.getElementById('hi').textContent=(q.f44/100).toFixed(2);
+  document.getElementById('lo').textContent=(q.f45/100).toFixed(2);
+  document.getElementById('amt').textContent=(q.f48/1e8).toFixed(2)+'亿';
+  document.getElementById('tn').textContent=(q.f50/100).toFixed(2)+'%';
+  document.getElementById('vbar-px').textContent=p;
+  document.getElementById('vbar-px').style.color=col;
+  document.getElementById('vbar-chg').textContent=(u?'▲':'▼')+Math.abs(c)+'%';
+  document.getElementById('vbar-chg').style.color=col;
+  const cur=+p,pnl=(cur-15.32)*5500,ret=((cur-15.32)/15.32*100).toFixed(2),stp=((cur-13)/cur*100).toFixed(1);
+  const pe=document.getElementById('pnl');
+  pe.textContent=(pnl>=0?'+':'')+'¥'+pnl.toFixed(0);
+  pe.style.color=pnl>=0?'var(--green)':'var(--red)';
+  const re=document.getElementById('ret');
+  re.textContent=(+ret>=0?'+':'')+ret+'%';
+  re.style.color=+ret>=0?'var(--green)':'var(--red)';
+  document.getElementById('stp').textContent='距止损-'+stp+'%';
+  document.getElementById('mf').textContent=fmt(q.f48||0);
+}
+
+function uf(f){
+  if(!f)return;
+  document.getElementById('ft').textContent=f.time?.substring(11,16)||'--:--';
+  const its=[{id:'xl',v:f.xl},{id:'l2',v:f.l},{id:'m',v:f.m},{id:'s',v:f.s},{id:'t',v:f.main}];
+  const mx=Math.max(...its.map(i=>Math.abs(i.v)));
+  its.forEach(({id,v})=>{
+    const pct=Math.abs(v)/mx*100,pos=v>=0||id==='s';
+    const b=document.getElementById('b'+id),va=document.getElementById('v'+id);
+    if(b){b.style.width=pct+'%';b.className='bf '+(pos?'bpos':'bneg');}
+    if(va){va.textContent=fmt(v);va.style.color=pos?'var(--green)':'var(--red)';}
+  });
+  document.getElementById('mf').textContent=fmt(f.main);
+}
+
+function rc(){
+  const c=document.getElementById('chart');
+  const mx=Math.max(...FH.map(d=>Math.abs(d.v)));
+  c.innerHTML=FH.map(d=>{
+    const h=Math.max(3,Math.abs(d.v)/sx*56),col=d.v>=0?'var(--green)':'var(--red)';
+    return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px" title="'+d.d+':'+(d.v>0?'+':'')+Math.round(d.v/10000)+'万"><div style="width:100%;height:'+h+'px;background:'+col+';opacity:.8"></div><div style="font-size:8px;color:var(--text3)">'+d.d+'</div></div>';
+  }).join('');
+}
+
+function ucd(){
+  const days=Math.ceil((new Date('2026-04-25')-new Date())/86400000);
+  if(days>0)document.getElementById('cd').textContent=days+'天后';
+}
+
+async function go(){
+  document.getElementById('ts').textContent='刷新中...';
+  const[q,f]=await Promise.all([fq(),ff()]);
+  uq(q);uf(f);
+  document.getElementById('ts').textContent=new Date().toTimeString().substring(0,8);
+}
+
+rc();ucd();go();
+setInterval(go,60000);
+setInterval(()=>{document.getElementById('ts').textContent=new Date().toTimeString().substring(0,8);},1000);
+setInterval(ucd,60000);
+</script>
+</body>
+</html>
