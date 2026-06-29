@@ -1,0 +1,16 @@
+# 私人配置与数据，绝不上传
+config.yaml
+__pycache__/
+*.pyc
+
+# 如果你把数据根目录设在了仓库内（不推荐），下面这些也会被忽略：
+inbox/*
+raw/*
+parsed/*
+index/*
+persona/*
+!inbox/.gitkeep
+!raw/.gitkeep
+!parsed/.gitkeep
+!index/.gitkeep
+!persona/.gitkeep

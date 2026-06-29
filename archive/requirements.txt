@@ -1,0 +1,5 @@
+# yihua-archive 依赖
+openai>=1.30.0          # 嵌入向量 + 可选画像模型
+anthropic>=0.39.0       # 可选：用 Claude 生成画像
+pyyaml>=6.0             # 读取 config.yaml
+numpy>=1.24             # 向量相似度计算
