@@ -1,0 +1,23 @@
+# 复制为 config.yaml 后按需修改（config.yaml 已被 .gitignore 忽略，不会上传）
+paths:
+  # 数据根目录。建议放在仓库【外】，避免私人对话被推到代码仓库。
+  # 如需异地备份，可在这个目录里单独 git init 一个【私有】仓库。
+  root: "~/yihua-archive"
+  inbox: "inbox"      # 你把导出的 zip/json 丢这里
+  raw: "raw"          # 原始备份（不可变）
+  parsed: "parsed"    # 规范化后：每个对话一个 .md
+  index: "index"      # 检索数据库
+  persona: "persona"  # 人格画像（"另一个我"）
+
+codex_cli:
+  # Codex CLI（电脑命令行版）本地日志目录，无需手动导出
+  sessions_dir: "~/.codex/sessions"
+
+llm:
+  provider: "openai"               # 画像生成用：openai | anthropic
+  chat_model: "gpt-4o"             # provider=anthropic 时改为如 claude-opus-4-8 等
+  embed_model: "text-embedding-3-small"   # 嵌入向量（仅 OpenAI 提供）
+
+# API Key 从环境变量读取，不写进配置文件：
+#   export OPENAI_API_KEY=sk-...
+#   export ANTHROPIC_API_KEY=sk-ant-...   # 仅 provider=anthropic 时需要
