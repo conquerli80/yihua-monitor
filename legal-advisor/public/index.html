@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>合同审查助手 · 真实法条核对</title>
+<style>
+  :root {
+    --bg:#070a0f; --bg2:#0d1117; --bg3:#111820; --bg4:#161e28;
+    --border:#1e2d3d; --border2:#2a4060;
+    --text:#c9d1d9; --text2:#8b949e; --text3:#484f58;
+    --green:#3fb950; --red:#f85149; --gold:#f0b429; --blue:#388bfd; --orange:#e06c00;
+    --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Noto Sans SC','Microsoft YaHei',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;min-height:100vh}
+  .warn-bar{background:rgba(240,180,41,0.08);border-bottom:1px solid rgba(240,180,41,0.4);padding:8px 20px;font-family:var(--mono);font-size:11px;color:var(--gold);text-align:center}
+  .hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+  .hdr .nm{font-size:16px;font-weight:600}
+  .hdr .nm small{color:var(--text2);font-weight:400;font-size:12px;margin-left:8px}
+  .status{font-family:var(--mono);font-size:11px;color:var(--text2);display:flex;gap:14px}
+  .status b{color:var(--green)}
+  .status .off{color:var(--text3)}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:880px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+  .card h3{font-size:13px;color:var(--text2);font-weight:500;margin-bottom:10px;letter-spacing:.5px}
+  textarea{width:100%;min-height:340px;background:var(--bg);color:var(--text);border:1px solid var(--border2);border-radius:6px;padding:12px;font-family:var(--mono);font-size:13px;line-height:1.6;resize:vertical}
+  textarea:focus{outline:none;border-color:var(--blue)}
+  .opts{display:flex;align-items:center;gap:18px;margin:12px 0;flex-wrap:wrap;font-size:13px;color:var(--text2)}
+  .opts label{display:flex;align-items:center;gap:6px;cursor:pointer}
+  .btn{background:var(--blue);color:#fff;border:none;border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn.ghost{background:transparent;border:1px solid var(--border2);color:var(--text2)}
+  .summary{background:var(--bg3);border-left:3px solid var(--blue);border-radius:4px;padding:12px 14px;white-space:pre-wrap;font-size:13px;line-height:1.7;margin-bottom:14px}
+  .finding{border:1px solid var(--border);border-radius:6px;padding:12px 14px;margin-bottom:12px;background:var(--bg3)}
+  .finding .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .sev{font-family:var(--mono);font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:1px}
+  .sev.high{background:rgba(248,81,73,.15);color:var(--red);border:1px solid rgba(248,81,73,.4)}
+  .sev.medium{background:rgba(240,180,41,.12);color:var(--gold);border:1px solid rgba(240,180,41,.35)}
+  .sev.low{background:rgba(56,139,253,.12);color:var(--blue);border:1px solid rgba(56,139,253,.35)}
+  .finding .fname{font-weight:600;font-size:14px}
+  .finding .clause{font-size:12px;color:var(--text3)}
+  .finding .excerpt{font-family:var(--mono);font-size:12px;color:var(--text2);background:var(--bg);border-radius:4px;padding:8px;margin:8px 0;line-height:1.6}
+  .finding .row{font-size:13px;line-height:1.7;margin:4px 0}
+  .finding .row b{color:var(--text)}
+  .statute{border-top:1px dashed var(--border);margin-top:10px;padding-top:8px}
+  .statute .s{font-size:12px;color:var(--text2);line-height:1.7;margin:4px 0}
+  .statute .s .art{color:var(--gold);font-family:var(--mono)}
+  .laws a{color:var(--blue);font-size:12px;text-decoration:none}
+  .laws a:hover{text-decoration:underline}
+  .ai{background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:14px;white-space:pre-wrap;line-height:1.8;font-size:13px;margin-top:8px}
+  .disclaimer{margin-top:18px;padding:12px 14px;background:rgba(248,81,73,.06);border:1px solid rgba(248,81,73,.25);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7}
+  .muted{color:var(--text3);font-size:12px}
+  .spin{display:inline-block;width:12px;height:12px;border:2px solid var(--border2);border-top-color:var(--blue);border-radius:50%;animation:sp .8s linear infinite;vertical-align:middle}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .empty{color:var(--text3);text-align:center;padding:40px 0;font-size:13px}
+  .backend-box{font-size:12px;color:var(--text2);margin-top:8px;border-top:1px dashed var(--border);padding-top:10px}
+</style>
+</head>
+<body>
+  <div class="warn-bar">⚠ 本工具为「辅助参考」，不构成法律意见，也不替代执业律师。重大事项请咨询律师或拨打全国法律援助热线 12348（免费）。</div>
+  <div class="hdr">
+    <div class="nm">合同审查助手 <small>规则体检 + 真实法条核对（国家法律法规数据库）</small></div>
+    <div class="status" id="status"><span class="off">连接中…</span></div>
+  </div>
+
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <h3>① 粘贴合同条款</h3>
+        <textarea id="contract" placeholder="把要审查的合同正文粘贴到这里。支持「第X条」「一、二、」「1. 2.」等编号，会自动分条审查。&#10;&#10;例如：&#10;第一条 乙方应于签约时支付定金50000元，如乙方违约定金不予退还。&#10;第二条 甲方有权随时单方解除本合同且不承担任何责任，最终解释权归甲方所有。"></textarea>
+        <div class="opts">
+          <label><input type="checkbox" id="useBackend" checked /> 联网核对官方法规库</label>
+          <label><input type="checkbox" id="useAI" /> 启用 AI 解读 <span class="muted" id="aiHint"></span></label>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button class="btn" id="reviewBtn" onclick="runReview()">开始审查</button>
+          <button class="btn ghost" onclick="loadSample()">载入示例</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>② 审查报告</h3>
+        <div id="report"><div class="empty">报告将显示在这里。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
